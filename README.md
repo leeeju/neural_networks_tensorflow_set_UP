@@ -12,3 +12,11 @@
 - 인터넷의 발전으로 빅데이터와 결합되어 특히 컴퓨터 분야 그중에서도 비젼과 관련된 Pascal VOC, ImagNet과 같이 잘 만들어진 영상 데이터(플렛폼)을 사용할 수 있어짐
 
 다양한 딥러닝 도구중 특히 영상입력으로 사용되는 영상인식, 객체검출 등의 분야에는 합성곱신경망(Convolutional neural network, CNN) 구조가 널리 사용되고 있으며 CNN은 보통 2차원 영상에서 특징을 추출하하는 컨볼루션(convolution) 레이어와 추출된 특징을 분류하는 완전연결(Fully Connected)로 구성됩니다
+
+연구 참고 사이트
+- 카페(Caffe) https://caffe.berkeleyvision.org/
+- 텐서플로우(TensorFlow) https://www.tensorflow.org/
+- 토치(pytorch) https://pytorch.org/
+- 다크넷(darknet) https://github.com/pjreddie/darknet
+- DLDT https://github.com/openvinotoolkit/openvino
+- 넷트론(netron) https://github.com/lutzroeder/netron
