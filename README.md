@@ -16,6 +16,13 @@
 
 다양한 딥러닝 도구중 특히 영상입력으로 사용되는 영상인식, 객체검출 등의 분야에는 합성곱신경망(Convolutional neural network, CNN) 구조가 널리 사용되고 있으며 CNN은 보통 2차원 영상에서 특징을 추출하하는 컨볼루션(convolution) 레이어와 추출된 특징을 분류하는 완전연결(Fully Connected)로 구성됩니다
 
+
+그중에서 텐서플로우를 사용해 볼까 합니다 ```pip install --upgrade tensorflow-gpu``` 를 사용해서 ubuntu에 텐서플로(TensorFlow)를 설치 합니다 
+- 텐서플로우의 설치는 2종류가 있다 CPU(Central Processing Unit)를 사용하는 ```pip install --upgrade tensorflow``` // GPU(Graphics Processing Unit)를 사용하는 ```pip install --upgrade tensorflow-gpu``` 둘 중에 자신이 사용할 버전을 선택해 준다. 개인적으로 GPU를 추천한다, 
+
+
+
+
 연구 참고 사이트
 - 카페(Caffe) https://caffe.berkeleyvision.org/
 - 텐서플로우(TensorFlow) https://www.tensorflow.org/
