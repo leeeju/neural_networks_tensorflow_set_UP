@@ -20,7 +20,15 @@
 그중에서 텐서플로우를 사용해 볼까 합니다 ```pip install --upgrade tensorflow-gpu``` 를 사용해서 ubuntu에 텐서플로(TensorFlow)를 설치 합니다 
 - 텐서플로우의 설치는 2종류가 있다 CPU(Central Processing Unit)를 사용하는 ```pip install --upgrade tensorflow``` // GPU(Graphics Processing Unit)를 사용하는 ```pip install --upgrade tensorflow-gpu``` 둘 중에 자신이 사용할 버전을 선택해 준다. 개인적으로 GPU를 추천한다, 
 
+간단한 계산식을 돌렸을떄 cpu를 사용하지않고 ```GeForce GTX 1080``` 의 gpu를 사용하는것을 볼 수 있다
 
+```bash
+2021-12-29 10:44:36.306118: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-12-29 10:44:36.306386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6952 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1
+[[1. 3.]
+ [3. 7.]]
+
+```
 
 
 연구 참고 사이트
