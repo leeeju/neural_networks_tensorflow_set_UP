@@ -75,10 +75,40 @@ Status: Image is up to date for hello-world:latest
 docker.io/library/hello-world:latest
 ```
 
+이제 tensorflow를 사용할 밑 준비가 다 되었다, 이제 텐서를 set_UP 해보자  
 
+다음 명령어들을 순서대로 입력해준다.
+```bash
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
+      && curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | sudo gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
+      && curl -s -L https://nvidia.github.io/libnvidia-container/$distribution/libnvidia-container.list | \
+            sed 's#deb https://#deb [signed-by=/usr/share/keyrings/nvidia-container-toolkit-keyring.gpg] https://#g' | \
+            sudo tee /etc/apt/sources.list.d/nvidia-container-toolkit.list
+```
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get install -y nvidia-docker2
+```
+```bash
+sudo apt install nvidia-cuda-toolkit
+```
+```bash
+sudo systemctl restart docker
+```
+```bash
+sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
+```
+![Screenshot from 2022-05-17 10-51-07](https://user-images.githubusercontent.com/84003327/168715001-06662fdb-5835-490b-a536-2bd0ac34ea56.png)
 
+다음과 같이 명령어가 잘 입력되면 위와 같은 CUDA 와 NVIDIA-SMI가 설정된 정보가 나오게 된다, 이제 도커를 사용해서 텐서를 실행해 보자!!
 
+```bash
+turtle01@turtle01:~$ docker run -it --rm tensorflow/tensorflow bash
+```
 
+![Screenshot from 2022-05-17 11-15-45](https://user-images.githubusercontent.com/84003327/168714714-f9adb4ff-0e8e-40b3-b34a-72633ba8e57f.png)
 
 
 
