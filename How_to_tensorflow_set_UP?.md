@@ -38,7 +38,7 @@ turtle01@turtle01:~$ id
 uid=1000(turtle01)gid=1000(turtle01)groups=1000(turtle01),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),998(docker)
 ```
 
-그럼 다음과 같이 998번에 도커가 등록된것을 볼 수 있다, 그럼 test를 위해서  ```docker image pull hello-world:latest``` 를 입력해보자
+그럼 다음과 같이 998번에 도커가 등록된것을 볼 수 있다, 한번에 안나올 수 있다, 그러면 ```reboot``` 을 한번 해준다, 그럼 test를 위해서  ```docker image pull hello-world:latest``` 를 입력해보자
 
 ```bash
 turtle01@turtle01:~$ docker image pull hello-world:latest
