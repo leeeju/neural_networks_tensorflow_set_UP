@@ -75,8 +75,11 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 ```
 
 간혹 다음과 같은 에러가 발행 할 수 있다 그 이유는 시스템에서 nvidia 그래픽을 찾을 수 없기 때문이다.
-```
-docker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error running hook #0: error running hook: exit status 1, stdout: , stderr: nvidia-container-cli: initialization error: nvml error: driver not loaded: unknown.
+
+```bash
+docker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed:
+unable to start container process: error during container init: error running hook #0: error running hook: exit status 1, stdout: ,
+stderr: nvidia-container-cli: initialization error: nvml error: driver not loaded: unknown.
 ```
 
 
