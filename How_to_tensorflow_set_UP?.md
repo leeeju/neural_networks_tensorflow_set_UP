@@ -73,6 +73,18 @@ sudo systemctl restart docker
 ```bash
 sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 ```
+
+간혹 다음과 같은 에러가 발행 할 수 있다 그 이유는 시스템에서 nvidia 그래픽을 찾을 수 없기 때문이다.
+```
+docker: Error response from daemon: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: error during container init: error running hook #0: error running hook: exit status 1, stdout: , stderr: nvidia-container-cli: initialization error: nvml error: driver not loaded: unknown.
+```
+
+
+
+
+
+
+
 ![Screenshot from 2022-05-17 10-51-07](https://user-images.githubusercontent.com/84003327/168715001-06662fdb-5835-490b-a536-2bd0ac34ea56.png)
 
 다음과 같이 명령어가 잘 입력되면 위와 같은 CUDA 와 NVIDIA-SMI가 설정된 정보가 나오게 된다, 이제 도커를 사용해서 텐서를 실행해 보자!!
