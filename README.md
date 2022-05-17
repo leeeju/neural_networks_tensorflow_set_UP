@@ -1,4 +1,4 @@
-# simple_neural_networks
+## simple_neural_networks
 뉴럴 네트워크의 기초를 알아보자
 
 인공신경망은 기계학습과 인지과학에서 생물학의 신경망에서 영감을 얻은 통계학적 학습 알고리즘이다. 인공신경망은 시냅스의 결합으로 네트워크를 형성한 인공 뉴런이 학습을 통해 시냅스의 결합 세기를 변화시켜, 문제 해결 능력을 가지는 모델 전반을 가리킨다
@@ -23,16 +23,69 @@
 간단한 계산식을 돌렸을떄 cpu를 사용하지않고 ```GeForce GTX 1080``` 의 gpu를 사용하는것을 볼 수 있다
 
 ```bash
-
 2021-12-29 10:44:36.306118: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:939] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
 2021-12-29 10:44:36.306386: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1525] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6952 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1080, pci bus id: 0000:01:00.0, compute capability: 6.1
 [[1. 3.]
  [3. 7.]]
+```
 
+## tensorflow set_UP
+
+OS : Ubuntu20.04
+
+먼저 텐서플로우(tensorflow) 이하 '텐서' 를 사용하는데 있어 가장 효율 적인 방법은 바로 Docker를 사용하는 것이다, 도커는 컨테이너 개념의 분리빌드를 제공함으로 가볍게 사용이 가능하다 
+도커를 미리 설치 했다는 가정을 하고 진행해보자 
+
+```bash
+docker image pull hello-world:latest
+```
+
+명령어를 사용해서 도커의 이미지가 생성되는지 알아보자, 다음과 같은 에러 메시지가 나온다면 root의 권한이 없기 때문에 나오는 메세지 이다   
+
+![Screenshot from 2022-05-17 11-03-48](https://user-images.githubusercontent.com/84003327/168713425-99556a0a-d744-43aa-a575-f818531ff67a.png)
+
+해결 방법을 알아보자.
+
+```bash
+turtle01@turtle01:~$ ls -al /var/run/docker.sock
+srw-rw---- 1 root docker 0 May 17 10:42 /var/run/docker.sock
+```
+다음 명령어를 사용해서 사용자 등록이 가능한지 알아보자  ``` srw-rw---- 1 root docker 0 May 17 10:42 /var/run/docker.sock ``` 메세지가 나오면 잘된것이다 
+
+
+```bash
+turtle01@turtle01:~$ sudo usermod -a -G docker $USER  #(turtle01)
+[sudo] password for technote:
+```
+
+다음과 같은 명령어를 사용에서 구룹 명령에 사용자를 등록해 준다  
+
+```bash
+turtle01@turtle01:~$ id
+uid=1000(turtle01)gid=1000(turtle01)groups=1000(turtle01),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),998(docker)
+```
+
+그럼 다음과 같이 998번에 도커가 등록된것을 볼 수 있다, 그럼 test를 위해서  ```docker image pull hello-world:latest``` 를 입력해보자
+
+```bash
+turtle01@turtle01:~$ docker image pull hello-world:latest
+latest: Pulling from library/hello-world
+Digest: sha256:95ddb6c31407e84e91a986b004aee40975cb0bda14b5949f6faac5d2deadb4b9
+Status: Image is up to date for hello-world:latest
+docker.io/library/hello-world:latest
 ```
 
 
+
+
+
+
+
+
 연구 참고 사이트
+
+---
+
 - 카페(Caffe) https://caffe.berkeleyvision.org/
 - 텐서플로우(TensorFlow) https://www.tensorflow.org/
 - 토치(pytorch) https://pytorch.org/
