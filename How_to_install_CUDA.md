@@ -31,9 +31,13 @@ blacklist nouveau                            <------- 내용추가
 options nouveau modeset=0                    <------- 내용추가
 ```
 
-다음 내용을 추가 하였다면 저장하고 pc의 재부팅이 필요하다, 하지만 재부팅 하기전에 명령어를 사용해하여 재부팅을 해주자!
+다음 내용을 추가 하였다면 저장하고 pc의 재부팅이 필요하다, 하지만 재부팅 하기전에 명령어를 입력 후 재부팅을 해주자!
 ```
 sudo update-initramfs -u
+```
+
+```
+reboot 
 ```
 
 pc의 재부팅이 완료 되었다면 다음 명령어를 사용해서 비활성화가 잘 이루어 졌는지 확인해준다
@@ -82,6 +86,34 @@ https://developer.nvidia.com/cuda-toolkit-archive
 자신의 pc 환경을 선택해주면 다음과 같은 설치 명령어가 나오게 된다
 
 ![Screenshot from 2022-05-23 18-28-49](https://user-images.githubusercontent.com/84003327/169789023-72432fc4-342b-459a-b01e-1f65328605de.png)
+
+ 설치 명령를 그대로 터미널 참에 ctrl + c  , ctrl + v  해준다, 그 후 조금 기다리면 다음과 같은 화면이 생성된다
+
+
+![Screenshot from 2022-05-24 11-13-34](https://user-images.githubusercontent.com/84003327/169934729-396a561b-7c0d-438e-a73f-19134043e7a1.png)
+
+```
+Abort
+```
+선택 후 엔터, 다음화면은 라이센스를 동의 하라는곳입니다 
+
+
+![Screenshot from 2022-05-24 11-21-28](https://user-images.githubusercontent.com/84003327/169935573-dc0f7791-d6d0-47af-ba90-93bded0e210e.png)
+
+```
+accept
+```
+입력해 줍니다
+![Screenshot from 2022-05-24 11-23-25](https://user-images.githubusercontent.com/84003327/169935802-d91a8154-4d03-4b35-bac6-30716b2b6de3.png)
+
+다음으로 드라이버를 선택해제 한다음 (이미 설치가 됬다) 다음으로 넘어가면 끝난것이다
+
+그 후 다음 명령어를 터미널에 입력해준다, 
+```
+export PATH=/usr/local/cuda-11.4/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+```
+입력 후 마무리로 ```source ~/.bashrc``` 를 입력하면 구다 설정이 끝이난것이다!!
 
 
 
