@@ -122,7 +122,7 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRAR
 nvcc: NVIDIA (R) Cuda compiler driver
 Copyright (c) 2005-2021 NVIDIA Corporation
 Built on Mon_Oct_11_21:27:02_PDT_2021
-Cuda compilation tools, release 11.4, V11.4.152
+Cuda compilation tools, release 11.4, V11.4.152   <-- 11.4 버전이 잘 설치되었다
 Build cuda_11.4.r11.4/compiler.30521435_0
 
 ```
