@@ -116,5 +116,13 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRAR
 ```
 입력 후 마무리로 ```source ~/.bashrc``` 를 입력하면 쿠다 설정이 끝이난것이다!!
 
+확인을 위하여 ```nvcc -V```를 입력하여 버전을 확인한다
 
+```bash
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Mon_Oct_11_21:27:02_PDT_2021
+Cuda compilation tools, release 11.4, V11.4.152
+Build cuda_11.4.r11.4/compiler.30521435_0
 
+```
