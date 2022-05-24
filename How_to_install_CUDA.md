@@ -104,6 +104,7 @@ Abort
 accept
 ```
 입력해 줍니다
+
 ![Screenshot from 2022-05-24 11-23-25](https://user-images.githubusercontent.com/84003327/169935802-d91a8154-4d03-4b35-bac6-30716b2b6de3.png)
 
 다음으로 드라이버를 선택해제 한다음 (이미 설치가 됬다) 다음으로 넘어가면 끝난것이다
@@ -113,7 +114,7 @@ accept
 export PATH=/usr/local/cuda-11.4/bin${PATH:+:${PATH}}
 export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 ```
-입력 후 마무리로 ```source ~/.bashrc``` 를 입력하면 구다 설정이 끝이난것이다!!
+입력 후 마무리로 ```source ~/.bashrc``` 를 입력하면 쿠다 설정이 끝이난것이다!!
 
 
 
